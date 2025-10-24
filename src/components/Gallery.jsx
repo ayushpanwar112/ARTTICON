@@ -4,18 +4,28 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 
-const images = [
-  '/src/assets/Gallery/img1.jpg',
-  '/src/assets/Gallery/img2.jpg',
-  '/src/assets/Gallery/img3.jpg',
-  '/src/assets/Gallery/img4.jpg',
-  '/src/assets/Gallery/img5.jpg',
-  '/src/assets/Gallery/img6.jpg',
-  '/src/assets/Gallery/img7.jpg',
-  '/src/assets/Gallery/img8.jpg',
-  '/src/assets/Gallery/img9.jpg',
-  '/src/assets/Gallery/img10.jpg',
+import img1 from '/src/assets/Gallery/img1.jpg';
+import img2 from '/src/assets/Gallery/img2.jpg';
+import img3 from '/src/assets/Gallery/img3.jpg';
+import img4 from '/src/assets/Gallery/img4.jpg';
+import img5 from '/src/assets/Gallery/img5.jpg';
+import img6 from '/src/assets/Gallery/img6.jpg';
+import img7 from '/src/assets/Gallery/img7.jpg';
+import img8 from '/src/assets/Gallery/img8.jpg';
+import img9 from '/src/assets/Gallery/img9.jpg';
+import img10 from '/src/assets/Gallery/img10.jpg';
 
+const images = [
+  img1,
+  img2,
+  img3,
+  img4,
+  img5,
+  img6,
+  img7,
+  img8,
+  img9,
+  img10,
 ];
 
 export default function Gallery() {
