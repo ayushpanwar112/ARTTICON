@@ -114,7 +114,7 @@ export default function Home() {
             <div className="relative">
               <div className="bg-white/10 backdrop-blur-lg p-8 rounded-3xl border border-white/20 shadow-2xl">
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">Conference Highlights</h3>
+                  <h3 className="text-2xl font-bold text-white mb-2">Conference Highlight</h3>
                   <div className="w-16 h-1 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full mx-auto"></div>
                 </div>
                 
