@@ -8,9 +8,7 @@ export default function RegistrationForm() {
   const formRef = useRef()
   const navigate = useNavigate()
 
-  useEffect(() => {
-    gsap.from(formRef.current, { opacity: 0, y: 10, duration: 0.6 })
-  }, [])
+
 
   function update(e) {
     setForm({ ...form, [e.target.name]: e.target.value })
@@ -20,7 +18,7 @@ export default function RegistrationForm() {
     e.preventDefault()
     setStatus('sending')
     try {
-      const res = await fetch('http://localhost:4000/register', {
+      const res = await fetch('http://localhost:4000/form/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form)
@@ -40,7 +38,7 @@ export default function RegistrationForm() {
 
   return (
     <div className="max-w-2xl mx-auto">
-      <form ref={formRef} className="bg-white/95 backdrop-blur-lg p-10 rounded-3xl shadow-2xl space-y-8 border border-white/20" onSubmit={submit}>
+      <form ref={formRef} className="bg-white p-10 rounded-3xl shadow-2xl space-y-8 border border-gray-100" onSubmit={submit}>
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
           <input 
@@ -48,7 +46,7 @@ export default function RegistrationForm() {
             value={form.name} 
             onChange={update} 
             required 
-            className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl shadow-sm focus:ring-4 focus:ring-teal-200 focus:border-teal-400 transition-all duration-300 bg-white/90 backdrop-blur-sm"
+            className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl shadow-sm focus:ring-4 focus:ring-teal-200 focus:border-teal-400 transition-all duration-300 bg-white"
             placeholder="Enter your full name"
           />
         </div>
@@ -61,7 +59,7 @@ export default function RegistrationForm() {
             value={form.email} 
             onChange={update} 
             required 
-            className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl shadow-sm focus:ring-4 focus:ring-teal-200 focus:border-teal-400 transition-all duration-300 bg-white/90 backdrop-blur-sm"
+            className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl shadow-sm focus:ring-4 focus:ring-teal-200 focus:border-teal-400 transition-all duration-300 bg-white"
             placeholder="Enter your email address"
           />
         </div>
@@ -74,7 +72,7 @@ export default function RegistrationForm() {
               value={form.organization} 
               onChange={update} 
               required
-              className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl shadow-sm focus:ring-4 focus:ring-teal-200 focus:border-teal-400 transition-all duration-300 bg-white/90 backdrop-blur-sm"
+              className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl shadow-sm focus:ring-4 focus:ring-teal-200 focus:border-teal-400 transition-all duration-300 bg-white"
               placeholder="Your hospital or medical institution"
             />
           </div>
@@ -84,7 +82,7 @@ export default function RegistrationForm() {
               name="phone" 
               value={form.phone} 
               onChange={update} 
-              className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl shadow-sm focus:ring-4 focus:ring-teal-200 focus:border-teal-400 transition-all duration-300 bg-white/90 backdrop-blur-sm"
+              className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl shadow-sm focus:ring-4 focus:ring-teal-200 focus:border-teal-400 transition-all duration-300 bg-white"
               placeholder="Your phone number"
             />
           </div>
@@ -98,7 +96,7 @@ export default function RegistrationForm() {
               value={form.designation} 
               onChange={update} 
               required
-              className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl shadow-sm focus:ring-4 focus:ring-teal-200 focus:border-teal-400 transition-all duration-300 bg-white/90 backdrop-blur-sm"
+              className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl shadow-sm focus:ring-4 focus:ring-teal-200 focus:border-teal-400 transition-all duration-300 bg-white"
             >
               <option value="">Select your designation</option>
               <option value="radiation_therapist">Radiation Therapist</option>
@@ -117,7 +115,7 @@ export default function RegistrationForm() {
               name="experience" 
               value={form.experience} 
               onChange={update} 
-              className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl shadow-sm focus:ring-4 focus:ring-teal-200 focus:border-teal-400 transition-all duration-300 bg-white/90 backdrop-blur-sm"
+              className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl shadow-sm focus:ring-4 focus:ring-teal-200 focus:border-teal-400 transition-all duration-300 bg-white"
             >
               <option value="">Select experience</option>
               <option value="0-2">0-2 years</option>
@@ -135,7 +133,7 @@ export default function RegistrationForm() {
             name="specialization" 
             value={form.specialization} 
             onChange={update} 
-            className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl shadow-sm focus:ring-4 focus:ring-teal-200 focus:border-teal-400 transition-all duration-300 bg-white/90 backdrop-blur-sm"
+            className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl shadow-sm focus:ring-4 focus:ring-teal-200 focus:border-teal-400 transition-all duration-300 bg-white"
           >
             <option value="">Select specialization (optional)</option>
             <option value="external_beam">External Beam Radiation Therapy</option>

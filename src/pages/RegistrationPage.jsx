@@ -6,20 +6,17 @@ export default function RegistrationPage() {
   const headerRef = useRef()
   
   useEffect(() => {
-    gsap.fromTo(headerRef.current.children, 
+    if (!headerRef.current) return
+    gsap.fromTo(
+      headerRef.current.children,
       { opacity: 0, y: 30 },
       { opacity: 1, y: 0, duration: 0.8, stagger: 0.2, ease: "power3.out" }
     )
   }, [])
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-50 via-white to-emerald-50">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute inset-0 bg-gradient-to-r from-teal-500/10 to-emerald-500/10"></div>
-      </div>
-      
-      <div className="relative max-w-4xl mx-auto px-6 py-16">
+    <div className="relative min-h-screen bg-gradient-to-br from-teal-50 via-white to-emerald-50">
+      <div className="relative z-10 max-w-4xl mx-auto px-6 py-16">
         <div ref={headerRef} className="text-center mb-12">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
             Join the
