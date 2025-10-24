@@ -5,16 +5,16 @@ import 'swiper/css/navigation';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 
 const images = [
-  '/src/assets/gallery/img1.jpg',
-  '/src/assets/gallery/img2.jpg',
-  '/src/assets/gallery/img3.jpg',
-  '/src/assets/gallery/img4.jpg',
-  '/src/assets/gallery/img5.jpg',
-  '/src/assets/gallery/img6.jpg',
-  '/src/assets/gallery/img7.jpg',
-  '/src/assets/gallery/img8.jpg',
-  '/src/assets/gallery/img9.jpg',
-  '/src/assets/gallery/img10.jpg',
+  '/src/assets/Gallery/img1.jpg',
+  '/src/assets/Gallery/img2.jpg',
+  '/src/assets/Gallery/img3.jpg',
+  '/src/assets/Gallery/img4.jpg',
+  '/src/assets/Gallery/img5.jpg',
+  '/src/assets/Gallery/img6.jpg',
+  '/src/assets/Gallery/img7.jpg',
+  '/src/assets/Gallery/img8.jpg',
+  '/src/assets/Gallery/img9.jpg',
+  '/src/assets/Gallery/img10.jpg',
 
 ];
 
