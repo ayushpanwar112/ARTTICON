@@ -1,0 +1,53 @@
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Pagination, Navigation, Autoplay } from 'swiper/modules';
+
+const images = [
+  '/src/assets/gallery/img1.jpg',
+  '/src/assets/gallery/img2.jpg',
+  '/src/assets/gallery/img3.jpg',
+  '/src/assets/gallery/img4.jpg',
+  '/src/assets/gallery/img5.jpg',
+  '/src/assets/gallery/img6.jpg',
+  '/src/assets/gallery/img7.jpg',
+  '/src/assets/gallery/img8.jpg',
+  '/src/assets/gallery/img9.jpg',
+  '/src/assets/gallery/img10.jpg',
+
+];
+
+export default function Gallery() {
+  return (
+    <section className="bg-gray-100 py-10">
+      <h2 className="text-3xl font-bold text-center mb-6">Campus and its Environment</h2>
+      <div className="max-w-5xl mx-auto px-4 relative group">
+        <Swiper
+          modules={[Pagination, Navigation, Autoplay]}
+          spaceBetween={20}
+          slidesPerView={1}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          pagination={{ clickable: true }}
+          navigation
+          breakpoints={{
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          className="rounded-2xl shadow-lg"
+        >
+          {images.map((src, index) => (
+            <SwiperSlide key={index}>
+              <img
+                src={src}
+                alt={`Gallery image ${index + 1}`}
+                className="w-full h-64 object-cover rounded-xl"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </section>
+  );
+}
+

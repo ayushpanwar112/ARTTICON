@@ -3,7 +3,39 @@
 @tailwind utilities;
 
 /* fallback custom styles */
-body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin: 0; padding: 0; }
-.container { max-width: 800px; margin: 2rem auto; padding: 1rem; }
-.success { color: green }
-.error { color: red }
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.success {
+    color: green
+}
+
+.error {
+    color: red
+}
+
+/* Hide arrows by default */
+.swiper-button-prev,
+.swiper-button-next {
+    opacity: 0;
+    transition: opacity 0.3s;
+    color: white;
+    /* small white arrows */
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* Show arrows when hovering the container */
+.group:hover .swiper-button-prev,
+.group:hover .swiper-button-next {
+    opacity: 1;
+}

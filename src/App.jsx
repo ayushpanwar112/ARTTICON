@@ -4,16 +4,19 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import RegistrationPage from './pages/RegistrationPage'
+import Gallery from './components/Gallery' 
 
 export default function App() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-1">
+       
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<RegistrationPage />} />
         </Routes>
+         <Gallery /> {/* render Gallery here */}
       </main>
       <Footer />
     </div>
